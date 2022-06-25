@@ -114,7 +114,7 @@ namespace AzureDevOpsDemo.Controllers
             }
             catch (Exception)
             {
-                //just to check pipeline working or not, delete this line later
+                //just to check pipeline working or not, delete this line
                 return StatusCode(StatusCodes.Status500InternalServerError, "Error deleting data to Database");
             }
         }
