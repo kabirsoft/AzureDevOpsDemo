@@ -85,7 +85,7 @@ namespace UnitTest.AzureDevOpsDemo
             //result.Should().BeOfType<OkObjectResult>();
             //var objectResult = (OkObjectResult)result;
             result.Value.Should().BeOfType<Employee>();
-            result.Value.Email.Should().Be("abs@test.com");
+            result.Value.Email.Should().Be("john@test.com");
 
         }
         [Fact]
@@ -115,7 +115,7 @@ namespace UnitTest.AzureDevOpsDemo
             
 
             //Assert
-            _employeesRepoMock.Verify(x => x.AddNew(newEmp), Times.Exactly(1));
+            _employeesRepoMock.Verify(x => x.AddNew(newEmp), Times.Exactly(3));
             
         }
 
