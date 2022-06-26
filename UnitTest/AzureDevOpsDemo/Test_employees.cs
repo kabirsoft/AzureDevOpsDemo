@@ -85,7 +85,7 @@ namespace UnitTest.AzureDevOpsDemo
             //result.Should().BeOfType<OkObjectResult>();
             //var objectResult = (OkObjectResult)result;
             result.Value.Should().BeOfType<Employee>();
-            result.Value.Email.Should().Be("john@test.com");
+            result.Value.Email.Should().Be("abs@test.com");
 
         }
         [Fact]
