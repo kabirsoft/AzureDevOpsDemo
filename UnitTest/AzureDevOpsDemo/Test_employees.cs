@@ -115,7 +115,7 @@ namespace UnitTest.AzureDevOpsDemo
             
 
             //Assert
-            _employeesRepoMock.Verify(x => x.AddNew(newEmp), Times.Exactly(3));
+            _employeesRepoMock.Verify(x => x.AddNew(newEmp), Times.Exactly(1));
             
         }
 
