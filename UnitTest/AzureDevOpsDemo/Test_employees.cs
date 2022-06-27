@@ -67,8 +67,6 @@ namespace UnitTest.AzureDevOpsDemo
             result.Should().BeOfType<OkObjectResult>();
             var objectResult = (OkObjectResult)result;
             objectResult.Value.Should().BeOfType<List<Employee>>();
-
-
         }
 
         [Fact]
@@ -110,9 +108,9 @@ namespace UnitTest.AzureDevOpsDemo
             //Arrange
             var newEmp = new Employee {Id = 42, Name = "Lynda", Address = "Tromsø", Email = "lynda@test.com", SalaryGrade = 60, DOB = Convert.ToDateTime("1991-01-21"), Created = DateTime.Now, Updated = DateTime.Now };
             _employeesRepoMock.Setup(x=>x.AddNew(newEmp)).ReturnsAsync(newEmp);
+
             //Act
-            var result = await _sut.Create(newEmp);
-            
+            var result = await _sut.Create(newEmp);            
 
             //Assert
             _employeesRepoMock.Verify(x => x.AddNew(newEmp), Times.Exactly(1));
