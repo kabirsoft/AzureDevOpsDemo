@@ -18,7 +18,7 @@ steps:
   inputs:
 	command: test
 	#projects: '**/*Test/*.csproj'
-	projects: '../AzureDevOpsDemo/AzureDevOpsDemo.csproj'
+	projects: '**/*DevOpsDemo/*.csproj'
 	arguments: '--configuration $(buildConfiguration)'
 
 - script: dotnet build --configuration $(buildConfiguration)
