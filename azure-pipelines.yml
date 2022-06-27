@@ -17,7 +17,8 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
 	command: test
-	projects: 'AzureDevOpsDemo.csproj'
+	#projects: '**/*Test/*.csproj'
+	projects: '../AzureDevOpsDemo/AzureDevOpsDemo.csproj'
 	arguments: '--configuration $(buildConfiguration)'
 
 - script: dotnet build --configuration $(buildConfiguration)
