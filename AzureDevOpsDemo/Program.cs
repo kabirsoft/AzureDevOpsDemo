@@ -12,7 +12,7 @@ builder.Services.AddDbContext<DataContext>(
 #if DEBUG
         options.UseSqlServer(builder.Configuration.GetConnectionString("AzureDevOpsDemoConStr"));
 #else
-            options.UseSqlServer(builder.Configuration.GetConnectionString("graphQLConStr"));
+            options.UseSqlServer(builder.Configuration.GetConnectionString("ProdDevOpsDemo"));
 #endif
 
     });
