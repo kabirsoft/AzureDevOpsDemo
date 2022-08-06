@@ -106,7 +106,7 @@ namespace UnitTest.AzureDevOpsDemo
         public async void Test_Employees_Post()
         {
             //Arrange
-            var newEmp = new Employee {Id = 42, Name = "Lynda", Address = "Tromsø", Email = "lynda@test.com", SalaryGrade = 60, DOB = Convert.ToDateTime("1991-01-21"), Created = DateTime.Now, Updated = DateTime.Now };
+            var newEmp = new Employee {Id = 42, Name = "Lynda", Address = "Tromsø", Email = "lynda@test.com", SalaryGrade = 70, DOB = Convert.ToDateTime("1991-01-21"), Created = DateTime.Now, Updated = DateTime.Now };
             _employeesRepoMock.Setup(x=>x.AddNew(newEmp)).ReturnsAsync(newEmp);
 
             //Act
