@@ -122,7 +122,7 @@ namespace UnitTest.AzureDevOpsDemo
         {
             //Arrange
             const int updatedId = 123;
-            Employee updateEmp = new Employee() { Id = updatedId, Name="AlexTest", Address="Oslo", Email="alex@test.com", SalaryGrade = 61, DOB = Convert.ToDateTime("1991-01-21"), Updated = DateTime.Now };
+            Employee updateEmp = new Employee() { Id = updatedId, Name="AlexTest", Address="Oslo", Email="alex@test.com", SalaryGrade = 70, DOB = Convert.ToDateTime("1991-01-21"), Updated = DateTime.Now };
             _employeesRepoMock.Setup(x => x.Get(updatedId)).ReturnsAsync(updateEmp);
 
             //Act

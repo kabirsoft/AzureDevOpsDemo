@@ -1,0 +1,31 @@
+tutorial: https://www.youtube.com/watch?v=SOtC1VLZKm4
+
+login: mka198-cloud@uit.no
+
+1. https://portal.azure.com
+2. http://dev.azure.com
+
+Step by step:
+Step 1. Create project in AzureDevOps(its free):
+http://dev.azure.com -> Create Project-> give name of project 
+Visibility: public.
+Version control: Git 
+Work item process: Agile
+
+Step 2. AzureDevOps->Pipelines->Create PipeLine
+Select GitHub (where your code repo) //check for username: dev.azure.com/mka198-cloud
+Select repo //ex: AzureDevOpsDemo
+click run and save
+Job will run. Til here build pipeline done.(Next is, realese pipeline will take that artifact zipped up and published and then push to azure portal).
+
+Step 3: Create Resource in portal.azure.com (here your artifact(project) will be hosted(deploy) here and you can browse from here)
+portal.azure.com-> Create resource-> search: Api app -> Create // it's a plan
+see image: create resource: OneDrive ->Development\Azure\create_resource
+
+Step 4:  Create release pipeline(for deploy azure portal):
+dev.azure.com -> releases -> new pipeline
+image: OneDrive -> Development\Azure\deploy
+
+
+run from azure:
+https://azuredevopsdemo2.azurewebsites.net/api/employees
